@@ -163,7 +163,7 @@ class Service implements ContainerInjectionInterface {
       if (count($data) == 0) {
         return TRUE;
       }
-      return $data[0] instanceof RootedJsonData;
+      return reset($data) instanceof RootedJsonData;
     });
 
   }
@@ -192,7 +192,7 @@ class Service implements ContainerInjectionInterface {
       if (count($data) == 0) {
         return TRUE;
       }
-      return $data[0] instanceof RootedJsonData;
+      return reset($data) instanceof RootedJsonData;
     });
 
   }
